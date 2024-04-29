@@ -1,0 +1,557 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+header {
+  background: #0f45aa;
+  color: #fff;
+  padding: 10px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    img {
+      max-width: 70px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    h1 {
+      margin-left: 20px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .players {
+    a {
+      text-decoration: none;
+      color: #fff;
+      span {
+        font-size: 16px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.main-block {
+  margin: 50px 10%;
+
+  .critics {
+    margin: 5px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    img {
+      max-width: 28px;
+      margin-right: 8px;
+    }
+    span {
+      font-size: 1.1em;
+      font-weight: 400;
+    }
+  }
+
+  .cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .card-block {
+      width: 42%;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+      border-radius: 30px;
+      padding: 20px 10px;
+      transition: all 500ms ease;
+      margin-top: 40px;
+
+      &:hover {
+        box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+        transform: scale(1.01);
+      }
+
+      .main-image {
+        position: relative;
+        img {
+          display: block;
+          margin: 0 auto;
+          max-width: 80%;
+          border-radius: 25px;
+        }
+      }
+
+      .info {
+        margin: 0 10%;
+        h3 {
+          text-align: center;
+          padding: 10px 0;
+          font-weight: 500;
+        }
+
+        .game-info {
+          li {
+            list-style-type: none;
+            font-size: 16px;
+            font-weight: 300;
+
+            &:last-child {
+              margin-bottom: 10px;
+            }
+          }
+        }
+
+        button {
+          width: 100%;
+          background: #0f45aa;
+          color: #fff;
+          padding: 10px;
+          border: 0;
+          border-radius: 10px;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 600;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .sort-and-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .sort {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      img {
+        max-width: 34px;
+        margin-right: 10px;
+      }
+
+      span {
+        font-size: 1.1em;
+        font-weight: 400;
+
+        .sort-type {
+          font-size: 1em;
+          color: #0f45aa;
+          border-bottom: 1px dashed #0f45aa;
+          margin-left: 8px;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+
+      .sort-block {
+        position: absolute;
+        background: #fff;
+        top: 40px;
+        width: 300px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        border: 1px solid #000;
+        padding: 20px 40px;
+        z-index: 10;
+
+        .default {
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+
+          img {
+            max-height: 22px;
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+
+          span {
+            font-size: 1.1em;
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+
+        .rating-asc-block {
+          display: flex;
+          align-items: center;
+
+          span {
+            font-size: 1.1em;
+          }
+
+          img {
+            max-height: 20px;
+            transform: rotate(-90deg);
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        .rating-desc-block {
+          display: flex;
+          align-items: center;
+          margin-top: 10px;
+
+          span {
+            font-size: 1.1em;
+          }
+
+          img {
+            max-height: 20px;
+            transform: rotate(90deg);
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .filter {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      img {
+        max-width: 34px;
+        margin-right: 10px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      span {
+        font-size: 1.1em;
+        font-weight: 400;
+        width: 200px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .filter-block {
+      position: absolute;
+      background: #fff;
+      top: 40px;
+      right: 0px;
+      width: 300px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      border: 1px solid #000;
+      padding: 20px 40px;
+      z-index: 10;
+
+      input {
+        margin: 8px 5px;
+      }
+
+      label {
+        font-size: 1.1em;
+        font-weight: 400;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.full-info {
+  width: 70%;
+  margin: 5% 10%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  padding: 2.5% 5%;
+  transition: all 500ms ease;
+
+  &:hover {
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+    transform: scale(1.01);
+  }
+
+  .front-block {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .image {
+      position: relative;
+      width: 60%;
+
+      .main-picture {
+        max-width: 100%;
+        border-radius: 25px;
+      }
+
+      .like {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        width: 30px;
+        height: 30px;
+        background: rgb(255, 255, 255);
+        border-radius: 7px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+        img {
+          margin: 5px;
+          width: 20px;
+          height: 20px;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .game-info {
+      width: 40%;
+      padding-top: 20px;
+      padding-left: 50px;
+      h2 {
+        text-align: center;
+      }
+      ul {
+        li {
+          list-style-type: none;
+          font-weight: 300;
+          line-height: 2;
+
+          &:first-child {
+            margin-top: 30px;
+          }
+        }
+      }
+    }
+  }
+  h3 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-weight: 300;
+  }
+}
+
+.players-number-block {
+  margin: 50px 10%;
+
+  p {
+    font-size: 1.4em;
+    font-weight: 400;
+    line-height: 1.5;
+    padding-bottom: 30px;
+  }
+
+  table {
+    border-collapse: collapse;
+    text-align: center;
+    font-weight: 400;
+    width: 100%;
+
+    tr {
+      border: 1px solid #000;
+    }
+    th {
+      border-right: 1px solid #000;
+      font-weight: 600;
+      padding: 10px 0;
+    }
+
+    .game {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: calc(100% - 0.5px);
+
+      .filterOptions {
+        img {
+          width: 20px;
+          transform: translateX(5px) translateY(3px);
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        .filter-block {
+          position: absolute;
+          background: #fff;
+          top: 40px;
+          right: 10%;
+          width: 300px;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+          border-radius: 20px;
+          border: 1px solid #000;
+          padding: 20px 40px;
+          z-index: 10;
+
+          input {
+            margin: 8px 5px;
+          }
+
+          label {
+            font-size: 1.1em;
+            font-weight: 400;
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+
+    .online {
+      .centered {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        .sortOptions {
+          img {
+            max-width: 14px;
+            margin-left: 8px;
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+
+          .sort-block {
+            position: absolute;
+            background: #fff;
+            top: 40px;
+            right: 0;
+            width: 300px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+            border-radius: 20px;
+            border: 1px solid #000;
+            padding: 20px 40px;
+            z-index: 10;
+            font-weight: 400;
+
+            .default {
+              display: flex;
+              align-items: center;
+              margin-bottom: 10px;
+
+              img {
+                max-height: 22px;
+                margin-right: 5px;
+
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+
+              span {
+                font-size: 1.1em;
+
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+
+            .rating-asc-block {
+              display: flex;
+              align-items: center;
+
+              span {
+                font-size: 1.1em;
+              }
+
+              img {
+                max-height: 20px;
+                margin-right: 5px;
+                transform: rotate(-90deg);
+              }
+
+              &:hover {
+                cursor: pointer;
+              }
+            }
+
+            .rating-desc-block {
+              display: flex;
+              align-items: center;
+              margin-top: 10px;
+
+              span {
+                font-size: 1.1em;
+              }
+
+              img {
+                max-height: 20px;
+                margin-right: 5px;
+                transform: rotate(90deg);
+              }
+
+              &:hover {
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .offline {
+      img {
+        max-width: 16px;
+        transform: rotate(-90deg) translateX(-2px);
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    td {
+      border: 1px solid #000;
+      padding: 10px;
+    }
+  }
+}
